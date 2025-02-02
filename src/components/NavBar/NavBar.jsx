@@ -13,14 +13,16 @@ const NavBar = () => {
     ];
 
     return (
-        <nav>
+        <nav className="bg-yellow-200 p-6">
             <div onClick={()=>setOpen(!opne)} className="text-2xl md:hidden">
                 {
-                    opne === true ? <IoIosMenu /> :  <IoIosClose  />
+                    opne === true ? <IoIosClose /> : <IoIosMenu />
                 }
                 {/* <IoIosMenu /> */}
                 </div>
-            <ul className="md:flex">
+            <ul className={`md:flex bg-yellow-200 px-6 absolute md:static duration-1000
+                ${opne? 'top-16':'-top-60'}
+                `}>
                 {
                     routes.map(route=><Link key={route.id} route={route}></Link>)
                 }
