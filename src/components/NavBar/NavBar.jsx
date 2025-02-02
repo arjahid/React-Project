@@ -18,7 +18,7 @@ const NavBar = () => {
                 {
                     opne === true ? <IoIosClose /> : <IoIosMenu />
                 }
-                {/* <IoIosMenu /> */}
+                
                 </div>
             <ul className={`md:flex bg-yellow-200 px-6 absolute md:static duration-1000
                 ${opne? 'top-16':'-top-60'}
